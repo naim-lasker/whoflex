@@ -1,16 +1,103 @@
-.whoflex-trigger {
-	text-align: center;
-	padding: 7px 13px;
-	background: #3e3e3e;
-	color: #fff;
-	font-size: 15px;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-	font-family: cursive;
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Arial';
+	font-size: 16px;
+	line-height: 23px;
 }
 
-.whoflex-modal {
+/* ######### Utility CSS ######### */
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.d-block {
+	display: block;
+}
+.d-flex {
+	display: flex;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.main-text-color {
+	color: #e0c463;
+}
+.main-bg-color {
+	color: #e0c463;
+}
+.text-red {
+	color: #ea4335;
+}
+.w-100 {
+	width: 100%;
+}
+.mb-0 {
+	margin-bottom: 0;
+}
+.mb-4 {
+	margin-bottom: 4px;
+}
+.mb-8 {
+	margin-bottom: 8px;
+}
+.mb-12 {
+	margin-bottom: 12px;
+}
+.mb-16 {
+	margin-bottom: 16px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.mb-24 {
+	margin-bottom: 24px;
+}
+.mt-0 {
+	margin-top: 0;
+}
+.mt-4 {
+	margin-top: 4px;
+}
+.mt-8 {
+	margin-top: 8px;
+}
+.mt-48 {
+	margin-top: 48px;
+}
+
+.whoflex-or {
+	position: relative;
+	text-align: center;
+	font-family: 'Arial';
+	font-weight: 400;
+	font-size: 18px;
+	color: #a29f9f;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.whoflex-or::after,
+.whoflex-or::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	height: 1px;
+	background-color: #ccc;
+	width: 46%;
+}
+.whoflex-or::before {
+	left: 0;
+}
+.whoflex-or::after {
+	right: 0;
+}
+
+/* ######### Modal CSS ######### */
+.whoflex-signin-modal,
+.whoflex-signup-modal {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -21,6 +108,7 @@
 	visibility: hidden;
 	transform: scale(1.1);
 	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+	overflow-y: auto;
 }
 .whoflex-modal-content {
 	position: absolute;
@@ -28,25 +116,189 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: white;
-	padding: 1rem 1.5rem;
-	width: 24rem;
+	padding: 48px 42px;
 	border-radius: 0.5rem;
+	box-sizing: border-box;
 }
-.whoflex-close-button {
-	float: right;
-	width: 1.5rem;
-	line-height: 1.5rem;
-	text-align: center;
+.whoflex-signin-modal-content {
+	width: 482px;
+}
+.whoflex-signin-close-button,
+.whoflex-signup-close-button {
 	cursor: pointer;
-	border-radius: 0.25rem;
-	background-color: lightgray;
+	position: absolute;
+	right: 20px;
+	top: 20px;
 }
-.whoflex-close-button:hover {
-	background-color: darkgray;
-}
-.whoflex-show-modal {
+.whoflex-signin-show-modal, .whoflex-signup-show-modal {
 	opacity: 1;
 	visibility: visible;
 	transform: scale(1);
 	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* ######### Input CSS ######### */
+.whoflex-label {
+	font-family: 'Arial';
+	font-weight: 400;
+	font-size: 15px;
+	color: #000000;
+	display: block;
+	margin-bottom: 5px;
+	margin-top: 0;
+}
+
+.whoflex-input {
+	font-family: 'Arial';
+	padding: 11.12px 12px;
+	font-weight: 400;
+	font-size: 14px;
+	color: #000000;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	display: block;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+	box-sizing: border-box;
+}
+.whoflex-input:focus,
+.whoflex-input:focus-visible {
+	border: 1px solid #e0c463;
+	outline: none;
+}
+
+/* ######### BUtton CSS ######### */
+.whoflex-button {
+	font-family: 'Arial';
+	font-weight: 700;
+	font-size: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: #e0c463;
+	border-radius: 5px;
+	display: block;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+	border: 0;
+	padding: 17.68px 12px;
+	cursor: pointer;
+}
+.whoflex-button:hover {
+	opacity: 0.8;
+}
+.whoflex-social-button {
+	font-family: 'Arial';
+	height: 60px;
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	font-size: 16px;
+	color: #000000;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	width: 100%;
+	padding: 0 16px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	margin-bottom: 14px;
+	background-color: #fff;
+}
+.whoflex-social-button:hover {
+	border: 1px solid #e0c463;
+}
+.whoflex-social-button img {
+	display: inline-block;
+	margin-right: 12px;
+}
+.whoflex-social-button span {
+	display: inline-block;
+}
+.whoflex-link {
+	font-family: 'Arial';
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration-line: underline;
+	color: #e0c363;
+}
+
+/* ######### Sign Up CSS ######### */
+.signup-modal-container {
+	display: flex;
+}
+@media only screen and (max-width: 991px) {
+    .signup-modal-container {
+        display: block;
+    }
+}
+.signup-modal-left-container {
+	width: 50%;
+	position: relative;
+}
+@media only screen and (max-width: 991px) {
+    .signup-modal-left-container {
+        display: none;
+    }
+}
+.whoflex-signup-modal-content {
+	width: 869px;
+	padding: 0;
+	border-radius: 10px;
+}
+@media screen and (max-width: 991px) {
+    .whoflex-signup-modal-content {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .whoflex-signup-modal-content {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .whoflex-signup-modal-content {
+        width: 90%;
+    }
+}
+.whoflex-left-text-container {
+	position: absolute;
+	left: 60px;
+	bottom: 160px;
+	width: 70%;
+	color: #fff;
+}
+.whoflex-left-img {
+	max-width: 100%;
+	height: 100%;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.whoflex-left-text-container h3 {
+	font-family: 'Arial';
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 41px;
+	color: #ffffff;
+	margin-bottom: 0;
+}
+.signup-modal-right-container {
+	width: 50%;
+	padding: 48px 42px;
+}
+@media only screen and (max-width: 991px) {
+    .signup-modal-right-container {
+        width: auto;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .signup-modal-right-container {
+        padding: 30px 15px;
+    }
+}
+
+.whoflex-aggrement {
+	font-family: 'Arial';
+	font-weight: 400;
+	font-size: 14px;
+	color: #999999;
 }

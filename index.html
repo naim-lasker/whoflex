@@ -5,18 +5,164 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Who flex</title>
-        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<button class="whoflex-trigger">Open Sign In</button>
+		<!-- ############ Sign In Modal Start Here ############ -->
+		<button class="signin-trigger" style="padding: 10px 20px;">Open Sign In</button>
 
-		<div class="whoflex-modal">
-			<div class="whoflex-modal-content">
-				<span class="whoflex-close-button">×</span>
-				<h1>Hello, I am a modal!</h1>
+		<div class="whoflex-signin-modal">
+			<div class="whoflex-modal-content whoflex-signin-modal-content">
+				<img
+					class="whoflex-signin-close-button"
+					src="images/icons/cross.svg"
+					alt=""
+				/>
+
+				<div>
+					<div class="text-center mb-24">
+						<img class="mb-16" src="images/logo.svg" alt="" />
+						<p class="mt-0">Flex your hidden wings.</p>
+					</div>
+
+					<div>
+						<form>
+							<div class="mb-20">
+								<label class="whoflex-label" for="email"
+									>Email</label
+								>
+								<input
+									class="whoflex-input"
+									type="email"
+									id="email"
+								/>
+								<span class="mt-8 d-block text-red"
+									>Please enter a valid email</span
+								>
+							</div>
+							<div class="mb-16">
+								<label class="whoflex-label" for="password"
+									>Password</label
+								>
+								<input
+									class="whoflex-input"
+									type="password"
+									id="password"
+								/>
+							</div>
+
+							<button class="whoflex-button mb-12" type="submit">
+								Sign in
+							</button>
+						</form>
+						<a href="#" class="whoflex-link d-block text-right"
+							>Forgot password?</a
+						>
+					</div>
+
+					<div class="whoflex-or">Or</div>
+
+					<div class="mb-20">
+						<button class="whoflex-social-button">
+							<img src="images/icons/google.svg" alt="" />
+							<span>Continue with Google</span>
+						</button>
+						<button class="whoflex-social-button">
+							<img src="images/icons/facebook.svg" alt="" />
+							<span>Continue with Facebook</span>
+						</button>
+						<button class="whoflex-social-button">
+							<img src="images/icons/apple.svg" alt="" />
+							<span>Continue with Apple</span>
+						</button>
+					</div>
+
+					<div>
+						New to Whoflex?
+						<a href="#" class="whoflex-link"> Sign up</a>
+					</div>
+				</div>
 			</div>
 		</div>
+		<!-- ############ Sign In Modal End Here ############ -->
 
-        <script src="script.js"></script>
+		<!-- ############ Sign Up Modal Start Here ############ -->
+		<button class="signup-trigger" style="padding: 10px 20px;">Open Sign up</button>
+
+		<div class="whoflex-signup-modal">
+			<div class="whoflex-modal-content whoflex-signup-modal-content">
+				<img
+					class="whoflex-signup-close-button"
+					src="images/icons/cross.svg"
+					alt=""
+				/>
+				<div class="signup-modal-container">
+					<div class="signup-modal-left-container">
+						<img
+							class="whoflex-left-img w-100"
+							src="images/sign-up.png"
+							alt=""
+						/>
+						<div class="whoflex-left-text-container">
+							<h3>Join Whoflex for Free</h3>
+							<p>
+								Achieve financial freedom quickly and easily
+								with Whoflex's short-form classes and coaching.
+							</p>
+						</div>
+					</div>
+
+					<div class="signup-modal-right-container">
+						<div>
+							<form>
+								<div class="mb-16">
+									<label class="whoflex-label" for="email"
+										>Sign Up wilth Email</label
+									>
+									<input
+										class="whoflex-input"
+										type="email"
+										id="email"
+									/>
+									<span class="mt-8 d-block text-red"
+										>Please enter a valid email</span
+									>
+								</div>
+							</form>
+						</div>
+
+						<div class="whoflex-or">Or</div>
+
+						<div class="mb-20">
+							<button class="whoflex-social-button">
+								<img src="images/icons/google.svg" alt="" />
+								<span>Continue with Google</span>
+							</button>
+							<button class="whoflex-social-button">
+								<img src="images/icons/facebook.svg" alt="" />
+								<span>Continue with Facebook</span>
+							</button>
+							<button class="whoflex-social-button">
+								<img src="images/icons/apple.svg" alt="" />
+								<span>Continue with Apple</span>
+							</button>
+						</div>
+
+						<div>
+							Already have an account?
+							<a href="#" class="whoflex-link"> Sign up</a>
+						</div>
+
+						<div class="mt-48 whoflex-aggrement">
+							By creating an account, you agree to Whoflex Terms
+							of Use and Privacy Policy.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ############ Sign Up Modal End Here ############ -->
+
+		<script src="script.js"></script>
 	</body>
 </html>
