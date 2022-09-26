@@ -4,7 +4,12 @@ const signInTrigger = document.querySelector(".signin-trigger");
 const signUpTrigger = document.querySelector(".signup-trigger");
 const signInCloseButton = document.querySelector(".whoflex-signin-close-button");
 const signUpCloseButton = document.querySelector(".whoflex-signup-close-button");
+const signUpButton = document.getElementById("signUpButton");
+const signUpInputs = document.getElementById("signUpInputs");
+const signUpSocialButtons = document.getElementById("signUpSocialButtons");
+const signUpBackButton = document.getElementById("signUpBackButton");
 
+console.log('signUpTrigger', signUpTrigger);
 
 function windowOnClick(event) {
     console.log('event', event.target);
@@ -17,21 +22,37 @@ function windowOnClick(event) {
 
 function toggleSignInModal() {
     signInModal.classList.toggle("whoflex-signin-show-modal");
-    // modal.classList.add("whoflex-show-modal");
 }
 function toggleSignUpModal() {
     signUpModal.classList.toggle("whoflex-signup-show-modal");
-    // modal.classList.add("whoflex-show-modal");
 }
 
 
+function hideEmailSignUpEmail(e) {
+    e.preventDefault()
+    signUpInputs.classList.add("d-block")
+    signUpInputs.classList.remove("d-none")
+    signUpButton.classList.add("d-none")
+    signUpSocialButtons.classList.add("d-none")
+}
 
+function showEmailSignUpEmail(e) {
+    e.preventDefault()
+    signUpInputs.classList.add("d-none")
+    signUpInputs.classList.remove("d-block")
+    signUpButton.classList.add("d-block")
+    signUpButton.classList.remove("d-none")
+    signUpSocialButtons.classList.add("d-block")
+    signUpSocialButtons.classList.remove("d-none")
+}
 
 signInTrigger.addEventListener("click", toggleSignInModal);
 signUpTrigger.addEventListener("click", toggleSignUpModal);
 signInCloseButton.addEventListener("click", toggleSignInModal);
 signUpCloseButton.addEventListener("click", toggleSignUpModal);
 window.addEventListener("click", windowOnClick);
+signUpButton.addEventListener('click', (e) => hideEmailSignUpEmail(e))
+signUpBackButton.addEventListener('click', (e) => showEmailSignUpEmail(e))
 
 
 // window.addEventListener("load", toggleSignUpModal)

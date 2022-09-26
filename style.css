@@ -7,6 +7,11 @@ body {
 	line-height: 23px;
 }
 
+a,
+button {
+	cursor: pointer;
+}
+
 /* ######### Utility CSS ######### */
 .text-center {
 	text-align: center;
@@ -15,7 +20,10 @@ body {
 	text-align: right;
 }
 .d-block {
-	display: block;
+	display: block !important;
+}
+.d-none {
+	display: none !important;
 }
 .d-flex {
 	display: flex;
@@ -31,6 +39,9 @@ body {
 }
 .text-red {
 	color: #ea4335;
+}
+.text-gray {
+	color: #999999;
 }
 .w-100 {
 	width: 100%;
@@ -65,8 +76,32 @@ body {
 .mt-8 {
 	margin-top: 8px;
 }
+.mt-24 {
+	margin-top: 24px;
+}
 .mt-48 {
 	margin-top: 48px;
+}
+.mr-12 {
+	margin-right: 12px;
+}
+
+.helper-text {
+	font-family: 'Arial';
+	font-weight: 400;
+	font-size: 14px;
+}
+
+@media only screen and (max-width: 575px) {
+	.whoflex-logo {
+		max-width: 130px;
+		margin-bottom: 8px;
+	}
+}
+@media only screen and (max-width: 380px) {
+	.whoflex-logo {
+		max-width: 100px;
+	}
 }
 
 .whoflex-or {
@@ -123,6 +158,12 @@ body {
 .whoflex-signin-modal-content {
 	width: 482px;
 }
+@media only screen and (max-width: 575px) {
+	.whoflex-signin-modal-content {
+		padding: 30px 15px;
+		width: 80%;
+	}
+}
 .whoflex-signin-close-button,
 .whoflex-signup-close-button {
 	cursor: pointer;
@@ -130,7 +171,8 @@ body {
 	right: 20px;
 	top: 20px;
 }
-.whoflex-signin-show-modal, .whoflex-signup-show-modal {
+.whoflex-signin-show-modal,
+.whoflex-signup-show-modal {
 	opacity: 1;
 	visibility: visible;
 	transform: scale(1);
@@ -227,18 +269,18 @@ body {
 	display: flex;
 }
 @media only screen and (max-width: 991px) {
-    .signup-modal-container {
-        display: block;
-    }
+	.signup-modal-container {
+		display: block;
+	}
 }
 .signup-modal-left-container {
 	width: 50%;
 	position: relative;
 }
 @media only screen and (max-width: 991px) {
-    .signup-modal-left-container {
-        display: none;
-    }
+	.signup-modal-left-container {
+		display: none;
+	}
 }
 .whoflex-signup-modal-content {
 	width: 869px;
@@ -246,19 +288,19 @@ body {
 	border-radius: 10px;
 }
 @media screen and (max-width: 991px) {
-    .whoflex-signup-modal-content {
-        width: 60%;
-    }
+	.whoflex-signup-modal-content {
+		width: 60%;
+	}
 }
 @media screen and (max-width: 767px) {
-    .whoflex-signup-modal-content {
-        width: 70%;
-    }
+	.whoflex-signup-modal-content {
+		width: 70%;
+	}
 }
 @media screen and (max-width: 575px) {
-    .whoflex-signup-modal-content {
-        width: 90%;
-    }
+	.whoflex-signup-modal-content {
+		width: 90%;
+	}
 }
 .whoflex-left-text-container {
 	position: absolute;
@@ -286,14 +328,27 @@ body {
 	padding: 48px 42px;
 }
 @media only screen and (max-width: 991px) {
-    .signup-modal-right-container {
-        width: auto;
-    }
+	.signup-modal-right-container {
+		width: auto;
+	}
 }
 @media only screen and (max-width: 480px) {
-    .signup-modal-right-container {
-        padding: 30px 15px;
-    }
+	.signup-modal-right-container {
+		padding: 30px 15px;
+	}
+}
+
+.sign-back-button {
+	font-family: 'Arial';
+	font-weight: 400;
+	font-size: 16px;
+	color: #999999;
+	display: flex;
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+	align-items: center;
+	cursor: pointer;
 }
 
 .whoflex-aggrement {

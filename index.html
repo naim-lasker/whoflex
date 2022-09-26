@@ -9,7 +9,9 @@
 	</head>
 	<body>
 		<!-- ############ Sign In Modal Start Here ############ -->
-		<button class="signin-trigger" style="padding: 10px 20px;">Open Sign In</button>
+		<button class="signin-trigger" style="padding: 10px 20px">
+			Open Sign In
+		</button>
 
 		<div class="whoflex-signin-modal">
 			<div class="whoflex-modal-content whoflex-signin-modal-content">
@@ -21,7 +23,7 @@
 
 				<div>
 					<div class="text-center mb-24">
-						<img class="mb-16" src="images/logo.svg" alt="" />
+						<img class="mb-16 whoflex-logo" src="images/logo.svg" alt="" />
 						<p class="mt-0">Flex your hidden wings.</p>
 					</div>
 
@@ -36,7 +38,7 @@
 									type="email"
 									id="email"
 								/>
-								<span class="mt-8 d-block text-red"
+								<span class="mt-8 d-block text-red helper-text"
 									>Please enter a valid email</span
 								>
 							</div>
@@ -87,7 +89,9 @@
 		<!-- ############ Sign In Modal End Here ############ -->
 
 		<!-- ############ Sign Up Modal Start Here ############ -->
-		<button class="signup-trigger" style="padding: 10px 20px;">Open Sign up</button>
+		<button class="signup-trigger" style="padding: 10px 20px">
+			Open Sign up
+		</button>
 
 		<div class="whoflex-signup-modal">
 			<div class="whoflex-modal-content whoflex-signup-modal-content">
@@ -113,39 +117,115 @@
 					</div>
 
 					<div class="signup-modal-right-container">
-						<div>
+						<div class="mt-24">
 							<form>
-								<div class="mb-16">
-									<label class="whoflex-label" for="email"
-										>Sign Up wilth Email</label
+								<button
+									class="whoflex-button mb-16"
+									id="signUpButton"
+									type="button"
+								>
+									Sign Up With Email
+								</button>
+
+								<div id="signUpInputs" class="d-none">
+									<button
+										class="mb-24 sign-back-button"
+										type="button"
+										id="signUpBackButton"
 									>
-									<input
-										class="whoflex-input"
-										type="email"
-										id="email"
-									/>
-									<span class="mt-8 d-block text-red"
-										>Please enter a valid email</span
+										<img
+											class="mr-12"
+											src="images/icons/left-arrow.svg"
+											alt=""
+										/>
+										<span>Back</span>
+									</button>
+
+									<div class="d-flex mb-16">
+										<div class="mr-12">
+											<label
+												class="whoflex-label"
+												for="forstName"
+												>First name</label
+											>
+											<input
+												class="whoflex-input"
+												type="text"
+												id="forstName"
+											/>
+										</div>
+										<div>
+											<label
+												class="whoflex-label"
+												for="lastName"
+												>Last name</label
+											>
+											<input
+												class="whoflex-input"
+												type="text"
+												id="lastName"
+											/>
+										</div>
+									</div>
+
+									<div class="mb-16">
+										<label class="whoflex-label" for="email"
+											>Email</label
+										>
+										<input
+											class="whoflex-input"
+											type="email"
+											id="email"
+										/>
+									</div>
+
+									<div class="mb-16">
+										<label
+											class="whoflex-label"
+											for="password"
+											>Password</label
+										>
+										<input
+											class="whoflex-input"
+											type="password"
+											id="password"
+										/>
+
+										<span class="mt-8 d-block text-gray helper-text"
+											>Password must be at least 6 characters.</span
+										>
+									</div>
+
+									<button
+										class="whoflex-button mb-16"
+										type="submit"
 									>
+										Create account
+									</button>
 								</div>
 							</form>
 						</div>
 
-						<div class="whoflex-or">Or</div>
+						<div id="signUpSocialButtons">
+							<div class="whoflex-or">Or</div>
 
-						<div class="mb-20">
-							<button class="whoflex-social-button">
-								<img src="images/icons/google.svg" alt="" />
-								<span>Continue with Google</span>
-							</button>
-							<button class="whoflex-social-button">
-								<img src="images/icons/facebook.svg" alt="" />
-								<span>Continue with Facebook</span>
-							</button>
-							<button class="whoflex-social-button">
-								<img src="images/icons/apple.svg" alt="" />
-								<span>Continue with Apple</span>
-							</button>
+							<div class="mb-20">
+								<button class="whoflex-social-button">
+									<img src="images/icons/google.svg" alt="" />
+									<span>Continue with Google</span>
+								</button>
+								<button class="whoflex-social-button">
+									<img
+										src="images/icons/facebook.svg"
+										alt=""
+									/>
+									<span>Continue with Facebook</span>
+								</button>
+								<button class="whoflex-social-button">
+									<img src="images/icons/apple.svg" alt="" />
+									<span>Continue with Apple</span>
+								</button>
+							</div>
 						</div>
 
 						<div>
@@ -154,8 +234,8 @@
 						</div>
 
 						<div class="mt-48 whoflex-aggrement">
-							By creating an account, you agree to Whoflex Terms
-							of Use and Privacy Policy.
+							By creating an account, you agree to Whoflex <a href="#" class="whoflex-link">Terms
+								of Use</a> and <a href="#" class="whoflex-link">Privacy Policy</a>.
 						</div>
 					</div>
 				</div>
