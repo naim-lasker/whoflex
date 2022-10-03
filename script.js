@@ -8,8 +8,10 @@ const signUpButton = document.getElementById("signUpButton");
 const signUpInputs = document.getElementById("signUpInputs");
 const signUpSocialButtons = document.getElementById("signUpSocialButtons");
 const signUpBackButton = document.getElementById("signUpBackButton");
+const errorMessage = document.getElementById("error-message");
+errorMessage.style.display = "none";
+const email = document.getElementById('email');
 
-console.log('signUpTrigger', signUpTrigger);
 
 function windowOnClick(event) {
     console.log('event', event.target);
@@ -56,3 +58,16 @@ signUpBackButton.addEventListener('click', (e) => showEmailSignUpEmail(e))
 
 
 // window.addEventListener("load", toggleSignUpModal)
+
+// document.getElementsByClassName("helper-text").style.display = "none";
+
+function checkEmailValidation() {
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if (!filter.test(email.value)) {
+        errorMessage.style.display = "block";
+          email.focus;
+          return false;
+      } else {
+          errorMessage.style.display = "none";
+      }
+}
