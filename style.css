@@ -109,6 +109,10 @@ button {
 	margin-top: 48px;
 }
 
+.mt-60 {
+	margin-top: 60px;
+}
+
 .ml-10 {
 	margin-left: 10px;
 }
@@ -203,6 +207,16 @@ button {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: white;
+	padding: 48px 42px 43px;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+}
+
+.whoflex-signup-modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	padding: 48px 42px 43px;
 	border-radius: 0.5rem;
 	box-sizing: border-box;
@@ -361,7 +375,7 @@ button {
 }
 
 .signup-modal-left-container {
-	width: 50%;
+	width: 49%;
 	position: relative;
 }
 
@@ -397,9 +411,8 @@ button {
 
 .whoflex-left-text-container {
 	position: absolute;
-	left: 60px;
-	bottom: 160px;
-	width: 70%;
+	left: 44px;
+	bottom: 165px;
 	color: #fff;
 }
 
@@ -417,11 +430,21 @@ button {
 	line-height: 41px;
 	color: #ffffff;
 	margin-bottom: 0;
+	width: 70%;
+}
+
+.whoflex-left-text-container p {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #FFFFFF;
+	width: 80%;
 }
 
 .signup-modal-right-container {
-	width: 50%;
-	padding: 48px 42px;
+	background-color: #fff;
+	width: 51%;
+	padding: 48px 54px 48px 42px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -449,6 +472,7 @@ button {
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
 }
+
 .sign-back-button img {
 	filter: none;
 	transition: 0.3s ease-in-out;
@@ -457,6 +481,7 @@ button {
 .sign-back-button:hover {
 	color: #000000;
 }
+
 .sign-back-button:hover img {
 	filter: brightness(0%);
 }
