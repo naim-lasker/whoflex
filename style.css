@@ -163,7 +163,7 @@ button {
 	font-weight: 400;
 	font-size: 18px;
 	color: #a29f9f;
-	margin-top: 30px;
+	margin-top: 25px;
 	margin-bottom: 30px;
 }
 
@@ -353,7 +353,6 @@ button {
 .whoflex-link {
 	font-family: 'Arial';
 	font-weight: 700;
-	font-size: 14px;
 	color: #e0c363;
 	text-decoration-line: none;
 	transition: 0.3s ease-in-out;

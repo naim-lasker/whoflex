@@ -19,7 +19,7 @@ function windowOnClick(event) {
     console.log('event', event.target);
     if (event.target === signInModal) {
         toggleSignInModal();
-    } else if(event.target === signUpModal) {
+    } else if (event.target === signUpModal) {
         toggleSignUpModal();
     }
 }
@@ -64,11 +64,14 @@ signUpBackButton.addEventListener('click', (e) => showEmailSignUpEmail(e))
 
 function checkEmailValidation() {
     const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      if (!filter.test(email.value)) {
+    if (!filter.test(email.value)) {
         errorMessage.style.display = "block";
-          email.focus;
-          return false;
-      } else {
-          errorMessage.style.display = "none";
-      }
+        email.style.border = "1px solid #ea4335";
+
+        email.focus;
+        return false;
+    } else {
+        errorMessage.style.display = "none";
+        email.style.border = "1px solid #dddddd";
+    }
 }
