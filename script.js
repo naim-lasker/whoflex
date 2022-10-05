@@ -21,9 +21,6 @@ const signupImg = document.getElementById('signupImg')
 const signupModalContainer = document.getElementById('signupModalContainer')
 const whoflexLeftTextContainer = document.getElementById('whoflexLeftTextContainer')
 
-console.log('signupImg',signupImg);
-
-
 function windowOnClick(event) {
     console.log('event', event.target);
     if (event.target === signInModal) {
