@@ -13,6 +13,15 @@ errorMessage.style.display = "none";
 const email = document.getElementById('email');
 const haveAccount = document.getElementById('have-account');
 haveAccount.innerHTML = 'Already have an account?'
+const signupRightContainer = document.getElementById('signup-right-container')
+signupRightContainer.classList.add("mt-36")
+const whoflexAggrement = document.getElementById('whoflex-aggrement')
+whoflexAggrement.classList.add("mb-0", "mt-45")
+const signupImg = document.getElementById('signupImg')
+const signupModalContainer = document.getElementById('signupModalContainer')
+const whoflexLeftTextContainer = document.getElementById('whoflexLeftTextContainer')
+
+console.log('signupImg',signupImg);
 
 
 function windowOnClick(event) {
@@ -34,15 +43,23 @@ function toggleSignUpModal() {
 
 function hideEmailSignUpEmail(e) {
     e.preventDefault()
+    signupImg.src = "images/sign-up2.png"
     haveAccount.innerHTML = 'Don\'t have an account?'
     signUpInputs.classList.add("d-block")
     signUpInputs.classList.remove("d-none")
     signUpButton.classList.add("d-none")
     signUpSocialButtons.classList.add("d-none")
+    signupRightContainer.classList.add("mt-0")
+    signupRightContainer.classList.remove("mt-36")
+    whoflexAggrement.classList.add("mb-17", "mt-90")
+    whoflexAggrement.classList.remove("mb-0", "mt-45" )
+    signupModalContainer.style.height = "679px"
+    whoflexLeftTextContainer.style.bottom = "192px"
 }
 
 function showEmailSignUpEmail(e) {
     e.preventDefault()
+    signupImg.src = "images/sign-up.png"
     haveAccount.innerHTML = 'Already have an account?'
     signUpInputs.classList.add("d-none")
     signUpInputs.classList.remove("d-block")
@@ -50,6 +67,12 @@ function showEmailSignUpEmail(e) {
     signUpButton.classList.remove("d-none")
     signUpSocialButtons.classList.add("d-block")
     signUpSocialButtons.classList.remove("d-none")
+    signupRightContainer.classList.add("mt-36")
+    signupRightContainer.classList.remove("mt-0")
+    whoflexAggrement.classList.add("mb-0", "mt-45")
+    whoflexAggrement.classList.remove("mb-17", "mt-90")
+    signupModalContainer.style.height = "642px"
+    whoflexLeftTextContainer.style.bottom = "158px"
 
 }
 

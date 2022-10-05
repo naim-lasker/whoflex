@@ -1,8 +1,33 @@
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(fonts/Arialn.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(fonts/ArialTh.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(fonts/ARIBL0.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(fonts/G_ari_bd.TTF);
+	font-weight: 600;
+}
+
+
 body {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Arial';
+	font-family: 'Arial', sans-serif;
 	font-size: 16px;
 	line-height: 23px;
 }
@@ -65,6 +90,11 @@ button {
 	margin-bottom: 4px;
 }
 
+.mb-6 {
+	margin-bottom: 6px;
+}
+
+
 .mb-8 {
 	margin-bottom: 8px;
 }
@@ -76,6 +106,11 @@ button {
 .mb-16 {
 	margin-bottom: 16px;
 }
+
+.mb-17 {
+	margin-bottom: 17px;
+}
+
 
 .mb-20 {
 	margin-bottom: 20px;
@@ -105,13 +140,33 @@ button {
 	margin-top: 24px;
 }
 
+.mt-36 {
+	margin-top: 36px;
+}
+
 .mt-48 {
 	margin-top: 48px;
 }
+.mt-40 {
+	margin-top: 40px;
+}
+.mt-45 {
+	margin-top: 45px;
+}
+
+.mt-50 {
+	margin-top: 50px;
+}
+
 
 .mt-60 {
 	margin-top: 60px;
 }
+
+.mt-90 {
+	margin-top: 90px;
+}
+
 
 .ml-10 {
 	margin-left: 10px;
@@ -163,7 +218,7 @@ button {
 	font-weight: 400;
 	font-size: 18px;
 	color: #a29f9f;
-	margin-top: 25px;
+	margin-top: 20px;
 	margin-bottom: 30px;
 }
 
@@ -236,11 +291,12 @@ button {
 .whoflex-signin-close-button {
 	cursor: pointer;
 	position: absolute;
-	right: 15px;
-	top: 13px;
+	right: 10px;
+	top: 8px;
 	border: 2px solid transparent;
 	border-radius: 30px;
 	transition: 0.3s ease-in-out;
+	padding: 5px;
 }
 
 .whoflex-signup-close-button {
@@ -251,11 +307,12 @@ button {
 	border: 2px solid transparent;
 	border-radius: 30px;
 	transition: 0.3s ease-in-out;
+	padding: 5px;
 }
 
 .whoflex-signin-close-button:hover,
 .whoflex-signup-close-button:hover {
-	border: 2px solid lightgray;
+	background-color: #eee;
 }
 
 .whoflex-signin-show-modal,
@@ -350,9 +407,14 @@ button {
 	display: inline-block;
 }
 
+.login-bottom-whoflex-link .whoflex-link {
+	font-size: 16px;
+}
+
 .whoflex-link {
 	font-family: 'Arial';
 	font-weight: 700;
+	font-size: 14px;
 	color: #e0c363;
 	text-decoration-line: none;
 	transition: 0.3s ease-in-out;
@@ -365,6 +427,7 @@ button {
 /* ######### Sign Up CSS ######### */
 .signup-modal-container {
 	display: flex;
+	height: 642px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -411,7 +474,7 @@ button {
 .whoflex-left-text-container {
 	position: absolute;
 	left: 44px;
-	bottom: 165px;
+	bottom: 158px;
 	color: #fff;
 }
 
@@ -444,6 +507,8 @@ button {
 	background-color: #fff;
 	width: 51%;
 	padding: 48px 54px 48px 42px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -488,6 +553,6 @@ button {
 .whoflex-aggrement {
 	font-family: 'Arial';
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 15px;
 	color: #999999;
 }

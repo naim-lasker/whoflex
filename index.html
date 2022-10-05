@@ -20,8 +20,8 @@
 			<img class="whoflex-signin-close-button" src="images/icons/cross.svg" alt="" />
 
 			<div>
-				<div class="text-center mb-24">
-					<img class="mb-12 whoflex-logo" src="images/logo.svg" alt="" />
+				<div class="text-center mb-20">
+					<img class="mb-8 whoflex-logo" src="images/logo.svg" alt="" />
 					<p class="mt-0 whoflex-moto">Flex your hidden wings.</p>
 				</div>
 
@@ -37,7 +37,7 @@
 							<input class="whoflex-input" type="password" id="password" />
 						</div>
 
-						<button class="whoflex-button mb-4" type="submit">
+						<button class="whoflex-button mb-6" type="submit">
 							Sign in
 						</button>
 					</form>
@@ -88,7 +88,7 @@
 					</button>
 				</div>
 
-				<div>
+				<div class="login-bottom-whoflex-link">
 					New to Whoflex?
 					<a href="#" class="whoflex-link"> Sign up</a>
 				</div>
@@ -105,10 +105,10 @@
 	<div class="whoflex-signup-modal">
 		<div class="whoflex-signup-modal-content whoflex-signup-modal-content">
 			<img class="whoflex-signup-close-button" src="images/icons/cross.svg" alt="" />
-			<div class="signup-modal-container">
+			<div class="signup-modal-container" id="signupModalContainer">
 				<div class="signup-modal-left-container">
-					<img class="whoflex-left-img w-100" src="images/sign-up.png" alt="" />
-					<div class="whoflex-left-text-container">
+					<img class="whoflex-left-img w-100" src="images/sign-up.png" alt=""  id="signupImg"/>
+					<div class="whoflex-left-text-container" id="whoflexLeftTextContainer">
 						<h3>Join Whoflex for Free</h3>
 						<p>
 							Achieve financial freedom quickly and easily
@@ -118,7 +118,7 @@
 				</div>
 
 				<div class="signup-modal-right-container">
-					<div class="mt-24">
+					<div class="mt-36" id="signup-right-container">
 						<form>
 							<button class="whoflex-button mb-16" id="signUpButton" type="button">
 								Sign Up With Email
@@ -146,7 +146,7 @@
 									<input class="whoflex-input" type="email" id="email" />
 								</div>
 
-								<div class="mb-16">
+								<div class="mb-26">
 									<label class="whoflex-label" for="password">Password</label>
 									<input class="whoflex-input" type="password" id="password" />
 
@@ -215,7 +215,7 @@
 						<a href="#" class="whoflex-link"> Sign in</a>
 					</div>
 
-					<div class="mt-60 whoflex-aggrement">
+					<div class="whoflex-aggrement" id="whoflex-aggrement">
 						By creating an account, you agree to Whoflex <a href="#" class="whoflex-link">Terms
 							of Use</a> and <a href="#" class="whoflex-link">Privacy Policy</a>.
 					</div>
