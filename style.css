@@ -289,6 +289,7 @@ button {
 }
 
 .whoflex-signin-close-button {
+	width: 30px;
 	cursor: pointer;
 	position: absolute;
 	right: 10px;
@@ -300,6 +301,7 @@ button {
 }
 
 .whoflex-signup-close-button {
+	width: 30px;
 	cursor: pointer;
 	position: absolute;
 	right: 7px;
